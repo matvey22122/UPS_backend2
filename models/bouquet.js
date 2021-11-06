@@ -30,7 +30,7 @@ bouquetSchema.pre("deleteOne", async function (next) {
   const idBouquet = this.getQuery()["_id"]
   const idSeller = this.getQuery()["seller"]
   const sellerToUpdate = await SellerModel.findOne({ _id: idSeller })
-  console.log(sellerToUpdate)
+
   if (!sellerToUpdate || !sellerToUpdate.bouquets) {
     next()
     return
@@ -42,7 +42,6 @@ bouquetSchema.pre("deleteOne", async function (next) {
       break
     }
   }
-
   await sellerToUpdate.save()
 
   next()

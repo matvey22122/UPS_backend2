@@ -26,13 +26,11 @@ export const PurchaseType = gql`
   input CreatePurchaseInput {
     bouquet: ID!
     customer: ID!
-    price: Float!
   }
 
   input UpdatePurchaseInput {
     bouquet: ID
     customer: ID
-    price: Float
   }
 
   extend type Mutation {
