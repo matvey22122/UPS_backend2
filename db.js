@@ -2,8 +2,6 @@ import mongoose from "mongoose"
 import config from "config"
 
 const DATABASE_URL = config.get("mongoUri")
-//TODO: this remove
-//   "mongoUri": "mongodb+srv://dbUser:wRCjV2pfm3e4RxW3@cluster0.mvg33.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 export const connectDb = () => {
   return mongoose.connect(
